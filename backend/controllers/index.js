@@ -33,7 +33,6 @@ const getCoin = async(id)=>{
 
 const getCoins = async(req, res)=>{
 
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
     try {
 
@@ -53,8 +52,6 @@ const getCoins = async(req, res)=>{
 }
 
 const getBalance = async(req, res)=>{
-
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
     const { uuid, amount } = req.body
     let profit = 0
@@ -93,8 +90,6 @@ const getBalance = async(req, res)=>{
 
 const getCsv = async(req, res)=>{
 
-  res.setHeader('Access-Control-Allow-Origin', '*');
-
     const { json } = req.body
     console.log( json )
 
@@ -121,8 +116,6 @@ const convertToCSV = (jsonData)=>{
 }
 
 const getJson = async(req, res)=>{
-
-  res.setHeader('Access-Control-Allow-Origin', '*');
 
     const { json } = req.body;
 
