@@ -11,7 +11,7 @@ const Dashboard = () => {
   
       const fetchCoins = async()=>{
   
-        const { data }  = await axios.get("/api/get_coins")
+        const { data }  = await axios.get("https://calc-k0hx.onrender.com/api/get_coins")
   
         console.log(data.coins)
         setCoins(data.coins)
