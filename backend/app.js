@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3001;
 
-const whitelist = ["https://calculator-pied-three-52.vercel.app/", "https://calculator-nw4y7abpz-milomadden.vercel.app"]
+/*const whitelist = ["https://calculator-pied-three-52.vercel.app/", "https://calculator-nw4y7abpz-milomadden.vercel.app"]
 
 const corsOptions = {
     origin: function(origin, callback){
@@ -15,7 +15,7 @@ const corsOptions = {
     }, 
     methods: 'GET, POST, PUT, DELETE',
     allowedHeaders: 'Content-Type, Authorization'
-}
+}*/
 
 app.use( cors() )
 app.use( express.json() )
