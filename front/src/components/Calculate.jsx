@@ -17,7 +17,7 @@ const Calculate = ({ show, handleClose, coin }) => {
     }
 
     const calculateProfit = async()=>{
-        const { data }  = await axios.post("https://calc-k0hx.onrender.com/api/get_balance", datos)
+        const { data }  = await axios.post("/api/get_balance", datos)
 
         console.log(data)
         setCalculation(data)
@@ -31,7 +31,7 @@ const Calculate = ({ show, handleClose, coin }) => {
 
     const downloadCsv = async(obj)=>{
 
-        const { data } = await axios.post("https://calc-k0hx.onrender.com/api/csv", { json: obj }, {
+        const { data } = await axios.post("/api/csv", { json: obj }, {
             responseType: 'blob'
         })
 
@@ -47,7 +47,7 @@ const Calculate = ({ show, handleClose, coin }) => {
     }
 
     const downloadJson = async(obj)=>{
-        const { data } = await axios.post("https://calc-k0hx.onrender.com/api/json", { json: obj }, {
+        const { data } = await axios.post("/api/json", { json: obj }, {
             responseType: 'blob'
         })
 
