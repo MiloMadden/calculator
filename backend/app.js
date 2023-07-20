@@ -4,7 +4,16 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use( cors() )
+const whitelist = ["https://calculator-pied-three-52.vercel.app/"]
+
+app.use( cors({
+    origin: function(origin, callback){
+        if(whitelist.includes(origin)){
+            return callback(null, origin)
+        }
+        return callback("Error de Cors perra")
+    }
+}) )
 app.use( express.json() )
 app.use( express.static('public') )
 
