@@ -17,7 +17,7 @@ const Calculate = ({ show, handleClose, coin }) => {
     }
 
     const calculateProfit = async()=>{
-        const { data }  = await axios.post("https://calculator-ghpwapunu-milomadden.vercel.app/?vercelToolbarCode=vy7uHB7JrKOUrxD/api/get_balance", datos)
+        const { data }  = await axios.post("https://calculator-pied-three-52.vercel.app/api/get_balance", datos)
 
         console.log(data)
         setCalculation(data)
@@ -31,7 +31,7 @@ const Calculate = ({ show, handleClose, coin }) => {
 
     const downloadCsv = async(obj)=>{
 
-        const { data } = await axios.post("https://calculator-ghpwapunu-milomadden.vercel.app/?vercelToolbarCode=vy7uHB7JrKOUrxD/api/csv", { json: obj }, {
+        const { data } = await axios.post("https://calculator-pied-three-52.vercel.app/api/csv", { json: obj }, {
             responseType: 'blob'
         })
 
@@ -47,7 +47,7 @@ const Calculate = ({ show, handleClose, coin }) => {
     }
 
     const downloadJson = async(obj)=>{
-        const { data } = await axios.post("https://calculator-ghpwapunu-milomadden.vercel.app/?vercelToolbarCode=vy7uHB7JrKOUrxD/api/json", { json: obj }, {
+        const { data } = await axios.post("https://calculator-pied-three-52.vercel.app/api/json", { json: obj }, {
             responseType: 'blob'
         })
 

@@ -4,7 +4,10 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use( cors() )
+app.use( cors({
+    origin: "https://calculator-pied-three-52.vercel.app", 
+    optionsSuccessStatus: 200
+}) )
 app.use( express.json() )
 app.use( express.static('public') )
 
