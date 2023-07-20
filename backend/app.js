@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.use( cors({
-    origin: "https://calculator-pied-three-52.vercel.app", 
+    origin: "*", 
     optionsSuccessStatus: 200
 }) )
 app.use( express.json() )
