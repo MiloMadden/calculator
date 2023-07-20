@@ -11,7 +11,7 @@ const Dashboard = () => {
   
       const fetchCoins = async()=>{
   
-        const { data }  = await axios.get("http://localhost:3001/api/get_coins")
+        const { data }  = await axios.get("https://calculator-ghpwapunu-milomadden.vercel.app/?vercelToolbarCode=vy7uHB7JrKOUrxD/api/get_coins")
   
         console.log(data.coins)
         setCoins(data.coins)
